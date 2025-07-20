@@ -15,6 +15,7 @@ function getDataFilm(keyword) {
             // return response.json()
         })
         .then(function (response) {
+            console.log(response)
             if (response.Error && response.Error.includes('Incorrect')) {
                 throw new Error('Input Word Please !')
             } else if (response.Error && response.Error.includes('Movie')) {
