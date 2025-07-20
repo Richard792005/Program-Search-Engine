@@ -4,7 +4,7 @@
 
 
 function getDataFilm(keyword) {
-   return fetch(`http://www.omdbapi.com/?apikey=8fc5d6f8&s=${keyword}`) // pakai return untuk mengembalikan nilai
+   return fetch(`https://www.omdbapi.com/?apikey=8fc5d6f8&s=${keyword}`) // pakai return untuk mengembalikan nilai
         .then(function (response) {
             if (response.ok === false) {
                 throw new Error (response.statusText)
@@ -76,7 +76,7 @@ function updateMovies(movies) {
 
 
 function getDataDetailShow (imdbid) {
-    return  fetch (`http://www.omdbapi.com/?apikey=8fc5d6f8&i=${imdbid}`) 
+    return  fetch (`https://www.omdbapi.com/?apikey=8fc5d6f8&i=${imdbid}`) 
     .then (function(response) {
         return response.json()
     })
